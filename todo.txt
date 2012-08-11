@@ -1,0 +1,27 @@
+pracuji:
+
+nebude:
+PHP rules
+PHP logs
+CSS padding v tabulkach
+
+hotovo:
+PERL wildcards and mimes
+SQL local time
+PHP modul vyhledávání souborů (zatím není, v databázi je podpora)
+JS formátování času
+JS formátování velikosti souboru
+JS řazení tabulek
+JS autocomplete tagů
+JS sbalování/rozbalování komentářů, výpisů, historie, formulářů
+JS kalendare
+HTML hlavicky objektu
+CSS formulare na pridavani
+CSS prihlasovaci obrazovka
+CSS sude/liche radky
+HTML validita
+HTML nápověda a dokumentace
+HTML nahradit textové výpisy za obrázky
+dokumentace
+stránkování
+řazení v php

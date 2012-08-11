@@ -1,0 +1,323 @@
+@CHARSET "UTF-8";
+
+#login {
+	margin: auto;
+	margin-top: 5em;
+	width: 40%;
+}
+
+#menu {
+	background-color: #7e7;
+	text-decoration: none;
+	font-size: 20pt;
+	padding: 0px 3em;
+}
+
+#menu a {
+	padding: 5px 20px;
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+
+#menu menu {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu menu li {
+	display: inline-block;
+	position: relative;
+}
+
+#menu menu li menu {
+	display: none;
+	position: absolute;
+	background-color: #7e7;
+}
+
+#menu menu li:hover {
+	background-color: #5c5;
+}
+
+#menu menu li:hover menu {
+	display: block;
+}
+
+#menu menu li menu li {
+	position: static;
+	display: block;
+}
+
+#menu menu li:hover menu li:hover {
+	background-color: #5c5;
+}
+
+#content {
+	width: 90%;
+	min-width: 800px;
+	margin: 0px auto;
+	padding: 20px;
+	min-height: 500px;
+	background-color: #f2f2f2;
+}
+
+#messages ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px;
+}
+
+#messages ul li {
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#messages ul li.message-info {
+	border: 1px solid yellow;
+	background-color: #eea;
+}
+
+#messages ul li.message-warn {
+	border: 1px solid blue;
+	background-color: #aae;
+}
+
+#messages ul li.message-error {
+	border: 1px solid red;
+	background-color: #eaa;
+}
+
+#messages ul li.message-success {
+	border: 1px solid green;
+	background-color: #aea;
+}
+
+#addRootForm label,#newUserForm label,#loginForm label,.leftLabel {
+	float: left;
+	width: 10em;
+}
+
+#navigation {
+	background-color: #ddd;
+	padding: 10px 30px;
+}
+
+.author {
+	font-weight: bold;
+}
+
+.tags {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tags li {
+	display: inline-block;
+	padding: 2px 10px;
+	margin: 1px 3px;
+	border-radius: 10px;
+	background-color: #ea4;
+	white-space: nowrap;
+	font-weight: bolder;
+}
+
+.tagForm,.commentForm,.ruleForm {
+	display: inline;
+}
+
+.removeTagForm input.removeButton,.removeCommentForm input.removeButton,.removeRuleForm input.removeButton
+	{
+	display: inline-block;
+	font-size: 8pt;
+	padding: 0;
+	vertical-align: text-top;
+}
+
+.comments,.rules {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.comments li {
+	background-color: #bf7;
+	padding: 10px;
+	margin: 5px 5px 5px 0px;
+	list-style-type: none;
+}
+
+.comments li .commentHeader {
+	background-color: #ae6;
+	padding: 10px;
+}
+
+.rules li {
+	background-color: #ffa;
+	padding: 10px;
+	margin: 5px 5px 5px 0px;
+	list-style-type: none;
+}
+
+.rules li .ruleHeader {
+	background-color: #ee9;
+	padding: 10px;
+}
+
+.fileDatas li {
+	background-color: #fcc;
+	padding: 10px;
+	margin: 5px 5px 5px 0px;
+	list-style-type: none;
+}
+
+.fileDatas li .fileDataHeader {
+	background-color: #ebb;
+	padding: 10px;
+}
+
+pre.preWrap {
+	white-space: pre-wrap;
+}
+
+pre.preScroll {
+	overflow: auto;
+}
+
+.trimmed {
+	max-height: 20em;
+	overflow: auto;
+}
+
+#fileInfo ul {
+	padding: 0;
+}
+
+#fileInfo li.version {
+	background-color: #cde;
+	padding: 10px;
+	margin: 5px 5px 5px 0px;
+	list-style-type: none;
+}
+
+#searchThis {
+	float: right;
+}
+
+#resultsHeader,#settings {
+	margin: 10px;
+}
+
+/* tables */
+table.tablesorter { /* 	font-family: arial; */
+	background-color: #e5e5e5;
+	margin: 10px 0pt 8px;
+	/* 	font-size: 8pt; */
+	width: 100%;
+	text-align: left;
+}
+
+table.tablesorter thead tr th,table.tablesorter tfoot tr th {
+	background-color: #cde;
+	border: 1px solid #fff;
+	/* 	font-size: 8pt; */
+	padding: 4px;
+	padding-right: 20px;
+}
+
+table.tablesorter thead tr .header {
+	background-image: url(img/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter thead tr .header a,table.tablesorter thead tr .header a:link,table.tablesorter thead tr .header a:visited,table.tablesorter thead tr .header a:active
+	{
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+
+table.tablesorter tbody td {
+	padding: 4px;
+	/* 	color: #3D3D3D; */
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+table.tablesorter tbody tr.odd td {
+	background-color: #F0F0F6;
+}
+
+table.tablesorter tbody td.fillCell {
+	padding: 0;
+}
+
+table.tablesorter tbody td.fillCell ul {
+	margin-left: 5px;
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(img/asc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(img/desc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown,table.tablesorter thead tr .headerSortUp
+	{
+	background-color: #8dbdd8;
+}
+
+/* must be very specific */
+table tbody tr.inactive td,table.tablesorter tbody tr.inactive td {
+	background-color: #ecc;
+}
+
+/* must be very specific */
+table tbody tr.invalid td,table.tablesorter tbody tr.invalid td {
+	background-color: #e55;
+}
+
+#paginationSettings {
+	float: right;
+}
+
+#paginationLinks {
+	float: left;
+	margin-left: 10%;
+}
+
+#paginationText {
+	text-align: center;
+}
+
+dt {
+	float: left;
+}
+
+dd {
+	margin-left: 10em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+dd.value {
+	font-weight: bold;
+}
+
+dd .fileName {
+	font-size: x-large;
+	margin-bottom: 1ex;
+	display: inline-block;
+}
+
+input, select, textarea {
+	/*margin-top: 3px;*/
+	margin-bottom: 3px;
+}

@@ -1,0 +1,55 @@
+<p>Application uses sqlite database to store information about all
+	files. Access to database is sepatated from presentaion and
+	concentrated in php classes which usually require id of record and
+	database handler to initialize themselves. Sometimes, when it is
+	appropieate, they cache their instances to lower the database
+	utilisation. In some cases objects are instantiated rather by database
+	result row than id.</p>
+<p>Usage of php PDO database access framework provieds enought
+	security to protect applictaion against most of common sql injection
+	attacks.</p>
+<p>Classes are used both to query and manipulate database. But
+	sometimes the manipulation is too complex (search) to wrap it to a
+	class or too specific (login). This way is the model layer separated
+	from the rest of application.</p>
+<p>View and control is separated as well. Control is handled by
+	process* scripts which always result into a valid refresh and they
+	usually set a message(s) which will be shown on a next page. Control
+	validates user input. Sepatation of these two layers provides a simple
+	mechanism how to disable reprocessing a single request during page
+	refresh.
+<p>Some pages (and their process pages) have restricted access
+	either by login (all except login page) or roles required. Request
+	parameters are always validated and tested if user has rights to access
+	particulat detail else he is redirected back to master page.</p>
+<p>Presentation layer consists of php script combined with html
+	fragments which often consists of inline php commands. All php output
+	which may contain anything except numbers is escaped. Urls are build
+	and escaped and as well. All html fragments are written directly
+	without need of any needed php echos. This significantly ease output
+	control and validity, pages are valid against HTML5.</p>
+<p>
+	To improve user experiance, javascript je sometimes used, in fact <a
+		href='http://www.jquery.com'>JQuery</a> framework is just linked. It formats
+	dates and times to target format (this could serve to localize them,
+	not implemented), it maintains a single format which is used while
+	table sorting. Javascript date picker is shown during filling search
+	criteria. Tags are autocompleted while adding them or searching for
+	them.
+</p>
+<p>
+	HTML tables with results are dynamicly sorted at the client side, a <a
+		href='http://www.tablesorter.com'>table sorter</a> scripts and css is used.
+	Search results were designed to be rendered from JSON gained from ajax
+	request to php server, but it would require code duplication (there
+	must be search available for users without javascript) and currently
+	result data are fetched by an ajax request in formed HTML and
+	displayed.
+</p>
+<p>Filling of database is handled by periodicly launched perl script
+	which may be rather hard to get working, it uses some extra CPAN
+	packages and some linux utilities which don't have to be available
+	everywhere. This script is intended to be a sample backend; there may
+	be other backends, the database schema is general enough. Addition of
+	new rule criteria or routines would require altering appropriate part
+	of php scripts.</p>
